@@ -1,0 +1,22 @@
+import * as THREE from "three";
+import nsyAuth from "./auth";
+import scene from "./scene";
+import render from "./render";
+import camera from "./camera";
+import lights from "./lights";
+import control from "./control";
+import loading from "./loading";
+import label from "./label";
+import weather from "./weather";
+export declare function useCommon(): {
+    NSYTHR: typeof THREE;
+    Auth: nsyAuth;
+    nsyScene: typeof scene;
+    nsyRender: typeof render;
+    nsyCamera: typeof camera;
+    nsyLights: typeof lights;
+    nsyControl: typeof control;
+    nsyLoading: typeof loading;
+    nsyLabel: typeof label;
+    nsyWeather: typeof weather;
+};

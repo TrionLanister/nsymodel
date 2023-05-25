@@ -1,0 +1,34 @@
+import * as THREE from "three";
+import { normalPos, weatherOpt } from "../../types";
+export default class RainDrop {
+    rainSize: number;
+    rainSpeed: number;
+    rainDrops: number;
+    rainRange: normalPos;
+    imgSrc: string;
+    rainPosition: normalPos;
+    autoRotate: boolean;
+    geomCenter: any;
+    texture: any;
+    material: any;
+    geom: any;
+    velocityY: Array<any>;
+    instance: any;
+    rotaSpeed: any;
+    rotaTimer: any;
+    weatherOpt: weatherOpt;
+    constructor(opt: weatherOpt);
+    init(): void;
+    changeTexture(url: string): void;
+    getCenterPoint(mesh: any): void;
+    _changePivot(x: any, y: any, z: any, obj: any): THREE.Object3D<THREE.Event>;
+    _randomVecArray(drops: any, saveVelY?: boolean): any;
+    changeRPosition(x: any, y: any, z: any): void;
+    changeRSize(size: any): void;
+    changeRSpeed(speed: any): void;
+    deleteRain(): void;
+    changeRDrops(drops: any): void;
+    changeVisible(status: any): void;
+    downSpeed(): void;
+    animate(): void;
+}
